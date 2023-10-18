@@ -1,7 +1,9 @@
+import Banner from "../Banner/Banner";
+
 const HomeLayout = () => {
   return (
     <div>
-      <h1 className="text-4xl">Hello I am your favorite home</h1>
+      <Banner></Banner>
     </div>
   );
 };
