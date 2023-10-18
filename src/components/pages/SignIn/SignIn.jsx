@@ -4,7 +4,7 @@ import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Swal from "sweetalert2";
-import {AuthContext} from "../../providers/AuthProvider/AuthProvider"
+import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 const SignIn = () => {
   const location = useLocation();
   const navigate = useNavigate();

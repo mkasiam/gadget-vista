@@ -26,8 +26,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100" data-aos="fade-down">
-      <div className="navbar-start gap-7">
+    <div className="navbar" data-aos="fade-down">
+      <div className="navbar-start gap-2 md:gap-5 lg:gap-7">
         <div className="dropdown lg:hidden">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
             <svg
@@ -53,11 +53,8 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/">
-          <div className="flex justify-center items-center gap-2">
-            <img src="/logo.png" alt="" />
-            <h1 className="text-xl md:text-3xl lg:text-3xl text-[#2F55D4] font-bold">
-              Social Manager
-            </h1>
+          <div>
+              <img className="w-full rounded-sm" src="logo.png" alt="" />
           </div>
         </Link>
       </div>

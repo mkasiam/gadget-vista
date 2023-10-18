@@ -10,17 +10,17 @@ import Register from "./components/pages/Register/Register";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root></Root>,
-    children:[
+    element: <Root />,
+    children: [
       {
-        path:"/singIn",
-        element:<SignIn></SignIn>
+        path: "/signIn",
+        element: <SignIn />,
       },
       {
-        path:"/register",
-        element:<Register></Register>
-      }
-    ]
+        path: "/register",
+        element: <Register></Register>,
+      },
+    ],
   },
 ]);
 
