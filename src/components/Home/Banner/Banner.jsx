@@ -1,63 +1,80 @@
+import { Link } from "react-router-dom";
+
 const Banner = () => {
   return (
-    <div className="carousel w-full">
-      <div id="slide1" className="carousel-item relative w-full">
-        <img
-          src="/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
-          className="w-full"
-        />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide4" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide2" className="btn btn-circle">
-            ❯
-          </a>
+    <>
+      {/* First Banner  */}
+      <div
+        className="max-h-max flex items-center justify-center my-4"
+        data-aos="fade-up"
+        data-aos-delay="500"
+      >
+        <div className="flex flex-col md:flex-row-reverse lg:flex-row-reverse items-center">
+          {/* Image Content  */}
+          <div className="mb-4 w-full md:w-2/5 lg:w-2/5">
+            <img
+              className="w-full rounded-sm"
+              src="https://i.ibb.co/WWTMrgs/final-banner1.jpg"
+              alt=""
+            />
+          </div>
+          {/* Text and Action Content  */}
+          <div className="w-full md:w-3/5 lg:w-3/5">
+            <div className="space-y-2 ">
+              <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-[#F28883]">
+                Your Window to the Future of Technology
+              </h1>
+              <p className="text-lg text-[#333]">
+                At Gadget Vista, we are passionate about bridging the gap
+                between cutting-edge technology and everyday life. Our mission
+                is to provide you with a clear view of the future, making the
+                latest and greatest gadgets and innovations easily accessible.
+              </p>
+            </div>
+            <div className="flex gap-4 mt-4">
+              <button className="px-4 py-2 bg-[#8973C0] rounded-md text-white font-bold">
+                <Link to="/">Buy Now</Link>
+              </button>
+              <button className="btn text-[#8973c0] btn-outline rounded-md">
+                <Link to="/">Our Products</Link>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      <div id="slide2" className="carousel-item relative w-full">
-        <img
-          src="/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
-          className="w-full"
-        />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide1" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide3" className="btn btn-circle">
-            ❯
-          </a>
+      {/* Second Banner  */}
+      <div
+        className="max-h-max flex items-center justify-center my-4"
+        data-aos="fade-up"
+        data-aos-delay="500"
+      >
+        <div className="flex flex-col md:flex-row lg:flex-row items-center gap-5">
+          {/* Image Content  */}
+          <div className="mb-4 w-full md:w-2/5 lg:w-2/5">
+            <img
+              className="w-full rounded-sm"
+              src="https://i.ibb.co/Fh05K91/final-Banner2.jpg"
+              alt=""
+            />
+          </div>
+          {/* Text and Action Content  */}
+          <div className="w-full md:w-3/5 lg:w-3/5">
+            <div className="space-y-4 text-left lg:text-right ">
+              <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-[#F28883]">
+                Quality Electronics, Exceptional Experiences.
+              </h1>
+              <p className="text-lg text-[#333]">
+              We offer meticulously selected, top-tier electronic products for superior quality. Our dedication goes further, providing an exceptional end-to-end customer experience with easy shopping, responsive support, secure shipping, and post-purchase satisfaction. We are here to simplify and enhance your life through technology, ensuring every interaction with us is exceptional.
+              </p>
+              <button className="px-4 py-2 bg-[#8973C0] rounded-md text-white font-bold float-left md:float-right lg:float-right">
+                <Link to="/">Know More</Link>
+              </button>
+            </div>
+            
+          </div>
         </div>
       </div>
-      <div id="slide3" className="carousel-item relative w-full">
-        <img
-          src="/images/stock/photo-1414694762283-acccc27bca85.jpg"
-          className="w-full"
-        />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide2" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide4" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-      </div>
-      <div id="slide4" className="carousel-item relative w-full">
-        <img
-          src="/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
-          className="w-full"
-        />
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a href="#slide3" className="btn btn-circle">
-            ❮
-          </a>
-          <a href="#slide1" className="btn btn-circle">
-            ❯
-          </a>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
