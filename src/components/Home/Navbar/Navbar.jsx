@@ -91,7 +91,7 @@ const Navbar = () => {
           ) : (
             <NavLink
               to="/signIn"
-              className="btn btn-outline btn-info rounded-md"
+              className="btn text-[#8973c0] btn-outline rounded-md"
             >
               Sign In
             </NavLink>
