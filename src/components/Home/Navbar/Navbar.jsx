@@ -69,14 +69,14 @@ const Navbar = () => {
       {/* Right side: User picture and login button */}
       <div className="navbar-end flex items-center">
         <div className="hidden md:block lg:block mr-2">
-          <h1>{user && <p className="text-lg font-medium">{user.displayName}</p>}</h1>
+          <h1>{user && <p className="text-lg font-medium">{user?.displayName}</p>}</h1>
         </div>
         <div>
           {user ? (
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
-                  <img src={user && user.photoURL} />
+                  <img src={user && user?.photoURL} />
                 </div>
               </label>
               <ul
