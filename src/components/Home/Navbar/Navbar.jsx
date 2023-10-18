@@ -14,12 +14,16 @@ const Navbar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-      <li>
-        <NavLink to="/addProducts">Add Products</NavLink>
-      </li>
-      <li>
-        <NavLink to="/myCart">My Cart</NavLink>
-      </li>
+      {user && (
+        <>
+          <li>
+            <NavLink to="/addProducts">Add Products</NavLink>
+          </li>
+          <li>
+            <NavLink to="/myCart">My Cart</NavLink>
+          </li>
+        </>
+      )}
       <li>
         <NavLink to="/about">About</NavLink>
       </li>
@@ -57,7 +61,7 @@ const Navbar = () => {
         </div>
         <Link to="/">
           <div>
-              <img className="w-full rounded-sm" src="logo.png" alt="" />
+            <img className="w-full rounded-sm" src="logo.png" alt="" />
           </div>
         </Link>
       </div>
@@ -69,7 +73,9 @@ const Navbar = () => {
       {/* Right side: User picture and login button */}
       <div className="navbar-end flex items-center">
         <div className="hidden md:block lg:block mr-2">
-          <h1>{user && <p className="text-lg font-medium">{user?.displayName}</p>}</h1>
+          <h1>
+            {user && <p className="text-lg font-medium">{user?.displayName}</p>}
+          </h1>
         </div>
         <div>
           {user ? (

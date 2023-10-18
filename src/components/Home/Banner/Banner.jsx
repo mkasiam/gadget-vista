@@ -14,7 +14,7 @@ const Banner = () => {
           <div className="mb-4 w-full md:w-2/5 lg:w-2/5">
             <img
               className="w-full rounded-sm"
-              src="https://i.ibb.co/WWTMrgs/final-banner1.jpg"
+              src="https://i.ibb.co/1q7CSC1/final-Banner1.jpg"
               alt=""
             />
           </div>

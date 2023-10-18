@@ -11,6 +11,8 @@ import PrivateRoute from "./components/pages/PrivateRoute/PrivateRoute";
 import Profile from "./components/pages/Profile/Profile";
 import NotFound from "./components/pages/NotFound/NotFound";
 import HomeLayout from "./components/Home/HomeLayOut/HomeLayout";
+import About from "./components/pages/About/About";
+import Contact from "./components/pages/Contact/Contact";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,6 +21,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomeLayout></HomeLayout>,
+      },
+      {
+        path:"/about",
+        element:<About></About>
+      },
+      {
+        path:"/contact",
+        element:<Contact></Contact>
       },
       {
         path: "/signIn",
