@@ -61,7 +61,7 @@ const Navbar = () => {
         </div>
         <Link to="/">
           <div>
-            <img className="w-full rounded-sm" src="logo.png" alt="" />
+            <img className="w-full rounded-sm" src="https://i.ibb.co/0BbjvsC/logo.png" alt="" />
           </div>
         </Link>
       </div>
