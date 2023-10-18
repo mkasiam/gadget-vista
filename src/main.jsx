@@ -13,6 +13,8 @@ import NotFound from "./components/pages/NotFound/NotFound";
 import HomeLayout from "./components/Home/HomeLayOut/HomeLayout";
 import About from "./components/pages/About/About";
 import Contact from "./components/pages/Contact/Contact";
+import AddProduct from "./components/pages/AddProduct/AddProduct";
+import MyCart from "./components/pages/MyCart/MyCart";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
       {
         path:"/contact",
         element:<Contact></Contact>
+      },
+      {
+        path:"/addProduct",
+        element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>
+      },
+      {
+        path:"/myCart",
+        element:<PrivateRoute><MyCart></MyCart></PrivateRoute>
       },
       {
         path: "/signIn",
