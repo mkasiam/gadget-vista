@@ -15,6 +15,7 @@ import About from "./components/pages/About/About";
 import Contact from "./components/pages/Contact/Contact";
 import AddProduct from "./components/pages/AddProduct/AddProduct";
 import MyCart from "./components/pages/MyCart/MyCart";
+import UpdateProduct from "./components/pages/UpdateProduct/UpdateProduct";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,20 +26,36 @@ const router = createBrowserRouter([
         element: <HomeLayout></HomeLayout>,
       },
       {
-        path:"/about",
-        element:<About></About>
+        path: "/about",
+        element: <About></About>,
       },
       {
-        path:"/contact",
-        element:<Contact></Contact>
+        path: "/contact",
+        element: <Contact></Contact>,
       },
       {
-        path:"/addProduct",
-        element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>
+        path: "/addProduct",
+        element: (
+          <PrivateRoute>
+            <AddProduct></AddProduct>
+          </PrivateRoute>
+        ),
       },
       {
-        path:"/myCart",
-        element:<PrivateRoute><MyCart></MyCart></PrivateRoute>
+        path: "/updateProduct",
+        element: (
+          <PrivateRoute>
+            <UpdateProduct></UpdateProduct>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/myCart",
+        element: (
+          <PrivateRoute>
+            <MyCart></MyCart>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/signIn",

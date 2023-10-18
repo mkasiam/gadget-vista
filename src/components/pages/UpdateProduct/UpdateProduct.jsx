@@ -1,5 +1,9 @@
-const AddProduct = () => {
-  const handleAddProduct = (e) => {
+import { useLoaderData } from "react-router-dom";
+
+const UpdateProduct = () => {
+  const products = useLoaderData();
+  const { _id, name, brand, type, price, rating, details, photo } = products;
+  const handleUpdateProduct = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form?.name?.value;
@@ -9,27 +13,28 @@ const AddProduct = () => {
     const price = form?.price?.value;
     const details = form?.details?.value;
     const photo = form?.photo?.value;
-    const newProduct = { name, brand, type, rating, price, details, photo };
-    console.log(newProduct);
+    const updatedProduct = { name, brand, type, rating, price, details, photo };
+    console.log(updatedProduct);
 
-    // fetch("http://localhost:5000/coffee", {
-    //   method: "POST",
+    // fetch(`http://localhost:5000/coffee/${_id}`, {
+    //   method: "PUT",
     //   headers: {
     //     "content-type": "application/json",
     //   },
-    //   body: JSON.stringify(newCoffee),
+    //   body: JSON.stringify(updatedProduct),
     // })
     //   .then((res) => res.json())
     //   .then((data) => {
     //     console.log(data);
-    //     if (data.acknowledged) {
+    //     if (data.modifiedCount) {
     //       Swal.fire({
     //         position: "center",
     //         icon: "success",
-    //         title: "Coffee Added Successfully",
+    //         title: "Coffee Updated Successfully",
     //         showConfirmButton: false,
     //         timer: 1500,
     //       });
+    //       form.reset();
     //     }
     //   });
   };
@@ -37,11 +42,11 @@ const AddProduct = () => {
     <div>
       <div className="border border-[#FFF] bg-[#FFF] rounded-md p-12 max-w-2xl mx-auto mt-7">
         <h1 className="text-3xl text-[#403F3F] text-center font-semibold mb-4">
-          Add New Product
+          Update Product
         </h1>
         <div className="w-full space-y-4">
           <div>
-            <form onSubmit={handleAddProduct} className="space-y-4">
+            <form onSubmit={handleUpdateProduct} className="space-y-4">
               {/* Form input field Container  */}
               <div className="flex flex-col md:flex-row lg:flex-row gap-5">
                 {/* For Left Side Content  */}
@@ -54,6 +59,7 @@ const AddProduct = () => {
                       type="text"
                       placeholder="Enter Product Name"
                       name="name"
+                      defaultValue={name}
                       className="input input-bordered bg-white w-full rounded-md"
                       required
                     />
@@ -66,6 +72,7 @@ const AddProduct = () => {
                       type="text"
                       placeholder="Enter Product rating"
                       name="rating"
+                      defaultValue={rating}
                       className="input input-bordered bg-white w-full rounded-md"
                       required
                     />
@@ -78,6 +85,7 @@ const AddProduct = () => {
                       type="text"
                       placeholder="ex. headphone, mobile , laptop"
                       name="type"
+                      defaultValue={type}
                       className="input input-bordered w-full bg-white rounded-md"
                       required
                     />
@@ -93,6 +101,7 @@ const AddProduct = () => {
                       type="text"
                       placeholder="Enter Brand Name"
                       name="brand"
+                      defaultValue={brand}
                       className="input input-bordered bg-white w-full rounded-md"
                       required
                     />
@@ -105,6 +114,7 @@ const AddProduct = () => {
                       type="text"
                       placeholder="Enter Coffee Price"
                       name="price"
+                      defaultValue={price}
                       className="input input-bordered bg-white w-full rounded-md"
                       required
                     />
@@ -117,6 +127,7 @@ const AddProduct = () => {
                       type="text"
                       placeholder="Enter Photo URL"
                       name="photo"
+                      defaultValue={photo}
                       className="input input-bordered w-full bg-white rounded-md"
                       required
                     />
@@ -133,6 +144,7 @@ const AddProduct = () => {
                   id="details"
                   cols="30"
                   rows="10"
+                  defaultValue={details}
                   className="border p-1 rounded-md"
                 ></textarea>
               </div>
@@ -142,7 +154,7 @@ const AddProduct = () => {
                   type="submit"
                   className="btn bg-[#3ABFF8] hover:bg-[#7cbfdc] text-white w-full rounded-md"
                 >
-                  ADD
+                  Update
                 </button>
               </div>
             </form>
@@ -153,4 +165,4 @@ const AddProduct = () => {
   );
 };
 
-export default AddProduct;
+export default UpdateProduct;
