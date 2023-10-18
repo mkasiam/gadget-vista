@@ -10,11 +10,16 @@ import Register from "./components/pages/Register/Register";
 import PrivateRoute from "./components/pages/PrivateRoute/PrivateRoute";
 import Profile from "./components/pages/Profile/Profile";
 import NotFound from "./components/pages/NotFound/NotFound";
+import HomeLayout from "./components/Home/HomeLayOut/HomeLayout";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
     children: [
+      {
+        path: "/",
+        element: <HomeLayout></HomeLayout>,
+      },
       {
         path: "/signIn",
         element: <SignIn />,

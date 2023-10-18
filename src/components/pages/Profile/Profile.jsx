@@ -16,7 +16,7 @@ const Profile = () => {
       <div className="flex justify-center items-center my-6" data-aos="fade-down">
         <div className="bg-[#FFF] rounded-md shadow-md p-7 space-y-3">
           <div className="flex justify-center">
-            <img className="rounded-full" src={user?.photoURL} alt="No Image Found" />
+            <img className="rounded-full w-28" src={user?.photoURL} alt="No Image Found" />
           </div>
           <p className="text-lg">Name : {user?.displayName}</p>
           <p className="text-lg">Email : {user?.email}</p>
