@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/CwXtfwk/google.png",
+    "brand": "google"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/pzbKTMW/sony.png",
+    "brand": "sony"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/WBRvQ0J/intel.png",
+    "brand": "intel"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/ChrqYCC/oppo.png",
+    "brand": "oppo"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/cyqwWHd/xiomi.png",
+    "brand": "xiomi"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/H79Xhfb/apple.png",
+    "brand": "apple"
+  }
+]
