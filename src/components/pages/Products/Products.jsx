@@ -10,7 +10,7 @@ const Products = () => {
     return null; // or return an error message or handle the error as needed
   }
   return (
-    <div>
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 my-7">
       {products.map((product) => (
         <Product key={product._id} product={product}></Product>
       ))}
