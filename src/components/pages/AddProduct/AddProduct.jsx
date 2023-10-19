@@ -142,7 +142,7 @@ const AddProduct = () => {
               <div className="mt-6">
                 <button
                   type="submit"
-                  className="btn bg-[#3ABFF8] hover:bg-[#7cbfdc] text-white w-full rounded-md"
+                  className="btn bg-[#8973C0] hover:bg-[#a491d5] text-white w-full rounded-md"
                 >
                   ADD
                 </button>

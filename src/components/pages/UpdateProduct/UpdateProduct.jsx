@@ -1,9 +1,10 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData} from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
-  const products = useLoaderData();
-  const { _id, name, brand, type, price, rating, details, photo } = products;
+  const product = useLoaderData();
+  console.log(product);
+  const { _id, name, brand, type, price, rating, details, photo } = product;
   const handleUpdateProduct = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -43,7 +44,7 @@ const UpdateProduct = () => {
     <div>
       <div className="border border-[#FFF] bg-[#FFF] rounded-md p-12 max-w-2xl mx-auto mt-7">
         <h1 className="text-3xl text-[#403F3F] text-center font-semibold mb-4">
-          Update Product
+          Update Product {name}
         </h1>
         <div className="w-full space-y-4">
           <div>

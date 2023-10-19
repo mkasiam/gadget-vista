@@ -58,12 +58,13 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/updateProduct",
+        path: "/update/:id",
         element: (
           <PrivateRoute>
             <UpdateProduct></UpdateProduct>
           </PrivateRoute>
         ),
+        loader:({params})=>fetch(`https://gadget-vista-server.vercel.app/products/${params.id}`)
       },
       {
         path: "/myCart",
