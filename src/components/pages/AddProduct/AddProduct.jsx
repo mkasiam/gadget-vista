@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 const AddProduct = () => {
   const handleAddProduct = (e) => {
     e.preventDefault();
@@ -12,26 +13,26 @@ const AddProduct = () => {
     const newProduct = { name, brand, type, rating, price, details, photo };
     console.log(newProduct);
 
-    // fetch("http://localhost:5000/coffee", {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(newCoffee),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //     if (data.acknowledged) {
-    //       Swal.fire({
-    //         position: "center",
-    //         icon: "success",
-    //         title: "Coffee Added Successfully",
-    //         showConfirmButton: false,
-    //         timer: 1500,
-    //       });
-    //     }
-    //   });
+    fetch("https://gadget-vista-server.vercel.app/products", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newProduct),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Product Added Successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      });
   };
   return (
     <div>
