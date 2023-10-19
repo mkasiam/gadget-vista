@@ -17,7 +17,7 @@ const UpdateProduct = () => {
     const updatedProduct = { name, brand, type, rating, price, details, photo };
     console.log(updatedProduct);
 
-    fetch(`http://localhost:5000/coffee/${_id}`, {
+    fetch(`https://gadget-vista-server.vercel.app/products/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

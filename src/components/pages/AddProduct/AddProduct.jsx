@@ -11,7 +11,7 @@ const AddProduct = () => {
     const details = form?.details?.value;
     const photo = form?.photo?.value;
     const newProduct = { name, brand, type, rating, price, details, photo };
-    console.log(newProduct);
+    
 
     fetch("https://gadget-vista-server.vercel.app/products", {
       method: "POST",
@@ -31,6 +31,7 @@ const AddProduct = () => {
             showConfirmButton: false,
             timer: 1500,
           });
+          form.target.reset();
         }
       });
   };

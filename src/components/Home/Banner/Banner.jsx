@@ -36,7 +36,7 @@ const Banner = () => {
                 <Link to="/">Buy Now</Link>
               </button>
               <button className="btn text-[#8973c0] btn-outline rounded-md">
-                <Link to="/">Our Products</Link>
+                <Link to="/products">Our Products</Link>
               </button>
             </div>
           </div>
