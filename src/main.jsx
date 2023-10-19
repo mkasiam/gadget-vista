@@ -17,6 +17,7 @@ import AddProduct from "./components/pages/AddProduct/AddProduct";
 import MyCart from "./components/pages/MyCart/MyCart";
 import UpdateProduct from "./components/pages/UpdateProduct/UpdateProduct";
 import Products from "./components/pages/Products/Products";
+import BrandDetails from "./components/pages/BrandDetails/BrandDetails";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: () => fetch("https://gadget-vista-server.vercel.app/products"),
+      },
+      {
+        path:"/:brand",
+        element:<PrivateRoute><BrandDetails></BrandDetails></PrivateRoute>,
+        loader: () => fetch("/brands.json")
       },
       {
         path: "/addProduct",
