@@ -2,9 +2,9 @@ import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 const ProductDetails = () => {
   const product = useLoaderData();
-  const {  name, brand, type, rating, price, details, photo } = product;
+  const { name, brand, type, rating, price, details, photo } = product;
   const handleAddToCart = () => {
-    const productInfo = {name, brand, price, rating };
+    const productInfo = { name, brand, price, rating };
     fetch("https://gadget-vista-server.vercel.app/cart", {
       method: "POST",
       headers: {
@@ -34,21 +34,13 @@ const ProductDetails = () => {
       <div className="card-body md:w-1/2">
         <div className="py-4">
           <div className="font-bold text-xl mb-2">{name}</div>
-          <p className="text-gray-700 text-lg mb-2 font-semibold">
-            Brand: {brand}
-          </p>
-          <p className="text-gray-700 text-lg font-semibold mb-2">
-            Product Type: {type}
-          </p>
+          <p className=" text-lg mb-2 font-semibold">Brand: {brand}</p>
+          <p className=" text-lg font-semibold mb-2">Product Type: {type}</p>
           <div className="mb-2">
-            <p className="text-gray-700 text-lg font-semibold">
-              Rating: {rating}
-            </p>
+            <p className=" text-lg font-semibold">Rating: {rating}</p>
           </div>
-          <p className="text-gray-700 text-xl font-bold mb-2">
-            Price: ${price}
-          </p>
-          <p className="text-lg text-[#333] font-semibold">{details}</p>
+          <p className=" text-xl font-bold mb-2">Price: ${price}</p>
+          <p className="text-lg font-semibold">{details}</p>
           <div className="flex gap-4 mt-4">
             <button
               onClick={handleAddToCart}

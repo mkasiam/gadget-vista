@@ -16,7 +16,7 @@ const FeaturedCategory = () => {
           <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">
             Get Your Desired Product
           </h1>
-          <p className="text-lg font-medium text-[#333] mb-2">Featured Category</p>
+          <p className="text-lg font-medium  mb-2">Featured Category</p>
         </div>
         <div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 text-[#323334]">

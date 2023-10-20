@@ -15,7 +15,7 @@ const Companies = () => {
         <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
           Discover Our Featured Brand
         </h1>
-        <p className="text-base sm:text-lg text-[#333]">
+        <p className="text-base sm:text-lg  ">
           Get Your Desired Brand Product from Featured Gadget Vista!
         </p>
       </div>

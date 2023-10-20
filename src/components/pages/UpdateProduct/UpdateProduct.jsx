@@ -145,7 +145,7 @@ const UpdateProduct = () => {
                   cols="30"
                   rows="10"
                   defaultValue={details}
-                  className="border p-1 rounded-md"
+                  className="border p-1 rounded-md bg-white"
                 ></textarea>
               </div>
               {/* Final Button  */}

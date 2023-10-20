@@ -6,7 +6,7 @@ const Review = () => {
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
           Discover Customers Are Smiling!
         </h1>
-        <p className="text-[#333] font-bold text-md md:text-lg lg:text-lg">
+        <p className=" font-bold text-md md:text-lg lg:text-lg">
           CUSTOMER REVIEW
         </p>
       </div>
@@ -23,10 +23,10 @@ const Review = () => {
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
               Real Happy Customers, Real Stories
             </h1>
-            <p className="py-6 text-lg text-[#333]">
+            <p className="py-6 text-lg ">
             Gadget Vista is the go-to destination for tech enthusiasts in Bangladesh. Their wide selection of products from renowned global brands is impressive. With a stellar reputation, I trust them for quality gadgets. The staff is knowledgeable and the service is top-notch. My one-stop shop for all things tech!
             </p>
-            <p className="font-bold text-xl text-[#333]">Alex parker</p>
+            <p className="font-bold text-xl">Alex parker</p>
             <p className="text-lg font-medium"> - CEO, MKB GLOBAL</p>
           </div>
         </div>

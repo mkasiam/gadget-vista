@@ -29,10 +29,10 @@ const Contact = () => {
         className="text-center mt-6 md:py-16 lg:py-20 space-y-5 px-0 md:px-4 lg:px-5"
         data-aos="fade-down"
       >
-        <h1 className="text-xl md:text-2xl lg:text-4xl text-[#3A3A3A] font-bold">
+        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">
           Contact
         </h1>
-        <p className="text-[#4b4f58] text-lg">
+        <p className="text-lg">
           Gadget Vista, your gateway to the future of technology, proudly
           presents an extensive lineup of electronics from industry giants such
           as Apple, Samsung, Xiaomi, Sony, Google, and Intel. We go beyond
@@ -49,7 +49,7 @@ const Contact = () => {
       <div className="flex flex-col md:flex-row lg:flex-row gap-7">
         {/* Contact Us Left Side (Information) */}
         <div
-          className="text-[#4b4f58] text-lg space-y-4"
+          className=" text-lg space-y-4"
           data-aos="fade-right"
           data-aos-duration="1500"
         >
@@ -57,7 +57,7 @@ const Contact = () => {
           <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">
             Get In Touch With Us
           </h1>
-          <p className="text-lg text-[#333] my-4">
+          <p className="text-lg my-4">
             We are so glad that you reached out to us. We would love to hear
             from you. Please, take a few moments to fill out this form, and our
             team will get back to you shortly
@@ -101,7 +101,7 @@ const Contact = () => {
             <div>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="mb-2 text-md font-semibold text-[#4b4f58]">
+                  <label className="mb-2 text-md font-semibold ">
                     Your Name
                   </label>
                   <input
@@ -112,7 +112,7 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label className="mb-2 text-md font-semibold text-[#403F3F]">
+                  <label className="mb-2 text-md font-semibold ">
                     Email address
                   </label>
                   <input
@@ -123,7 +123,7 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label className="mb-2 text-md font-semibold text-[#403F3F]">
+                  <label className="mb-2 text-md font-semibold">
                     Phone Number
                   </label>
                   <input
@@ -135,7 +135,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label className="mb-2 text-md font-semibold text-[#403F3F]">
+                  <label className="mb-2 text-md font-semibold">
                     Your Message
                   </label>
                   <textarea

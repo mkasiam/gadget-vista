@@ -24,7 +24,7 @@ const Banner = () => {
               <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-[#F28883]">
                 Your Window to the Future of Technology
               </h1>
-              <p className="text-lg text-[#333]">
+              <p className="text-lg">
                 At Gadget Vista, we are passionate about bridging the gap
                 between cutting-edge technology and everyday life. Our mission
                 is to provide you with a clear view of the future, making the
@@ -63,7 +63,7 @@ const Banner = () => {
               <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-[#F28883]">
                 Quality Electronics, Exceptional Experiences.
               </h1>
-              <p className="text-lg text-[#333]">
+              <p className="text-lg">
               We offer meticulously selected, top-tier electronic products for superior quality. Our dedication goes further, providing an exceptional end-to-end customer experience with easy shopping, responsive support, secure shipping, and post-purchase satisfaction. We are here to simplify and enhance your life through technology, ensuring every interaction with us is exceptional.
               </p>
               <button className="px-4 py-2 bg-[#8973C0] rounded-md text-white font-bold float-left md:float-right lg:float-right">
