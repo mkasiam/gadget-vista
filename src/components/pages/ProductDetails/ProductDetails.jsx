@@ -8,7 +8,7 @@ const ProductDetails = () => {
     fetch("https://gadget-vista-server.vercel.app/cart", {
       method: "POST",
       headers: {
-        "content-type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(productInfo),
     })

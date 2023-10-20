@@ -6,35 +6,16 @@ const MyCart = () => {
   const loadProducts = useLoaderData();
   const [products, setProducts] = useState(loadProducts);
 
-  const handleDelete = (id) => {
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        fetch(`https://gadget-vista-server.vercel.app/cart/${id}`, {
-          method: "DELETE",
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-            if (data.deletedCount) {
-              Swal.fire("Deleted!",
-               "Your file has been deleted.",
-                "success");
-              const remaining = products.filter(product=>product._id !== id);
-              setProducts(remaining);
-            }
-            
-          });
-      }
-    });
-  };
+  const handleDelete = (id) =>{
+    fetch(`https://gadget-vista-server.vercel.app/cart/${id}`,{
+      method:"DELETE"
+    })
+    .then(res => res.json())
+    .then(data=>{
+      console.log(data);
+    })
+  }
+
   return (
     <div>
       <h2>Cart Items: {loadProducts.length}</h2>
@@ -43,17 +24,16 @@ const MyCart = () => {
           {/* head */}
           <thead>
             <tr>
-              <th></th>
-              <th>Email</th>
-              <th>Created At</th>
-              <th>Last Logged In</th>
-              <th>Action</th>
+              <th>Name</th>
+              <th>Brand</th>
+              <th>Price</th>
+              <th>Rating</th>
+              <th>Remove</th>
             </tr>
           </thead>
           <tbody>
             {products.map((product) => (
               <tr key={product._id}>
-                <th>1</th>
                 <td>{product.name}</td>
                 <td>{product.brand}</td>
                 <td>{product.price}</td>
