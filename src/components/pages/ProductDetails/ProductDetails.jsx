@@ -26,13 +26,14 @@ const ProductDetails = () => {
         }
       });
   };
+
   return (
-    <div className="card card-side bg-base-100 shadow-xl">
-      <figure>
-        <img src={photo} alt="Movie" />
-      </figure>
-      <div className="card-body">
-        <div className="px-6 py-4">
+    <div className="card card-side flex flex-col md:flex-row lg:flex-row bg-base-100 shadow-xl md:flex md:space-x-4">
+      <div className="w-full md:w-1/2 lg:w-1/2">
+        <img src={photo} alt="Product" className="w-full" />
+      </div>
+      <div className="card-body md:w-1/2">
+        <div className="py-4">
           <div className="font-bold text-xl mb-2">{name}</div>
           <p className="text-gray-700 text-lg mb-2 font-semibold">
             Brand: {brand}
@@ -52,9 +53,9 @@ const ProductDetails = () => {
           <div className="flex gap-4 mt-4">
             <button
               onClick={handleAddToCart}
-              className="px-4 py-2 bg-[#8973C0] rounded-md text-white font-bold"
+              className="btn btn-active bg-[#8973c0] btn-info rounded-md text-white font-bold"
             >
-              <Link>Add to Cart</Link>
+              Add to Cart
             </button>
             <button className="btn text-[#8973c0] btn-outline rounded-md">
               <Link to="/products">All products</Link>
