@@ -31,7 +31,7 @@ const AddProduct = () => {
             showConfirmButton: false,
             timer: 1500,
           });
-          form.target.reset();
+          form.reset();
         }
       });
   };

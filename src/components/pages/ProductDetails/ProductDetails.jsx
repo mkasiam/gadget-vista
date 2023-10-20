@@ -54,7 +54,7 @@ const ProductDetails = () => {
               onClick={handleAddToCart}
               className="px-4 py-2 bg-[#8973C0] rounded-md text-white font-bold"
             >
-              <Link to="/myCart">Add to Cart</Link>
+              <Link>Add to Cart</Link>
             </button>
             <button className="btn text-[#8973c0] btn-outline rounded-md">
               <Link to="/products">All products</Link>

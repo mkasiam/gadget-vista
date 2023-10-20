@@ -46,9 +46,13 @@ const router = createBrowserRouter([
         loader: () => fetch("https://gadget-vista-server.vercel.app/products"),
       },
       {
-        path:"/:brand",
-        element:<PrivateRoute><BrandDetails></BrandDetails></PrivateRoute>,
-        loader: () => fetch("/brands.json")
+        path: "/:brand",
+        element: (
+          <PrivateRoute>
+            <BrandDetails></BrandDetails>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/brands.json"),
       },
       {
         path: "/addProduct",
@@ -65,16 +69,18 @@ const router = createBrowserRouter([
             <UpdateProduct></UpdateProduct>
           </PrivateRoute>
         ),
-        loader:({params})=>fetch(`https://gadget-vista-server.vercel.app/products/${params.id}`)
+        loader: ({ params }) =>
+          fetch(`https://gadget-vista-server.vercel.app/products/${params.id}`),
       },
       {
-        path:"/details/:id",
-        element:(
+        path: "/details/:id",
+        element: (
           <PrivateRoute>
             <ProductDetails></ProductDetails>
           </PrivateRoute>
         ),
-        loader:({params})=>fetch(`https://gadget-vista-server.vercel.app/products/${params.id}`)
+        loader: ({ params }) =>
+          fetch(`https://gadget-vista-server.vercel.app/products/${params.id}`),
       },
       {
         path: "/myCart",
@@ -83,6 +89,7 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
+        loader: () => fetch("https://gadget-vista-server.vercel.app/cart"),
       },
       {
         path: "/signIn",
