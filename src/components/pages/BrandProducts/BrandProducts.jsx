@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 const BrandProducts = ({ product }) => {
-  const { _id,name, brand, type, rating, price, details, photo } = product;
+  const { _id,name, brand, type, rating, price, photo } = product;
   return (
     <div className="max-w-sm w-full bg-white shadow-lg rounded-lg overflow-hidden">
       <div>
