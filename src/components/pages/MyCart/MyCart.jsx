@@ -22,11 +22,15 @@ const MyCart = () => {
         })
           .then((res) => res.json())
           .then((data) => {
+            console.log(data);
             if (data.deletedCount) {
-              Swal.fire("Deleted!", "Your file has been deleted.", "success");
-              const remaining = products.filter((product) => product._id !== id);
+              Swal.fire("Deleted!",
+               "Your file has been deleted.",
+                "success");
+              const remaining = products.filter(product=>product._id !== id);
               setProducts(remaining);
             }
+            
           });
       }
     });

@@ -2,9 +2,9 @@ import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 const ProductDetails = () => {
   const product = useLoaderData();
-  const { _id, name, brand, type, rating, price, details, photo } = product;
+  const {  name, brand, type, rating, price, details, photo } = product;
   const handleAddToCart = () => {
-    const productInfo = { _id, name, brand, price, rating };
+    const productInfo = {name, brand, price, rating };
     fetch("https://gadget-vista-server.vercel.app/cart", {
       method: "POST",
       headers: {
@@ -14,7 +14,6 @@ const ProductDetails = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.acknowledged) {
           Swal.fire({
             position: "center",
