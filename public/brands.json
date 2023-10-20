@@ -2,31 +2,49 @@
   {
     "id": 1,
     "image": "https://i.ibb.co/CwXtfwk/google.png",
-    "brand": "google"
+    "brand": "google",
+    "banner1": "https://i.ibb.co/pdc46pS/rsz-gv-banner8.jpg",
+    "banner2": "https://i.ibb.co/QnndRL0/gv-banner.jpg",
+    "banner3": "https://i.ibb.co/bJWbxd0/rsz-gv-banner3.jpg"
   },
   {
     "id": 2,
     "image": "https://i.ibb.co/pzbKTMW/sony.png",
-    "brand": "sony"
+    "brand": "sony",
+    "banner1": "https://i.ibb.co/QnndRL0/gv-banner.jpg",
+    "banner2": "https://i.ibb.co/bJWbxd0/rsz-gv-banner3.jpg",
+    "banner3": "https://i.ibb.co/pdc46pS/rsz-gv-banner8.jpg"
   },
   {
     "id": 3,
     "image": "https://i.ibb.co/WBRvQ0J/intel.png",
-    "brand": "intel"
+    "brand": "intel",
+    "banner1": "https://i.ibb.co/QnndRL0/gv-banner.jpg",
+    "banner2": "https://i.ibb.co/C1tSXY6/rsz-gv-banner4.jpg",
+    "banner3": "https://i.ibb.co/G5NQ5Qj/gv-banner1.jpg"
   },
   {
     "id": 4,
     "image": "https://i.ibb.co/ChrqYCC/oppo.png",
-    "brand": "oppo"
+    "brand": "oppo",
+    "banner1": "https://i.ibb.co/QnndRL0/gv-banner.jpg",
+    "banner2": "https://i.ibb.co/pdc46pS/rsz-gv-banner8.jpg",
+    "banner3": "https://i.ibb.co/bJWbxd0/rsz-gv-banner3.jpg"
   },
   {
     "id": 5,
     "image": "https://i.ibb.co/cyqwWHd/xiomi.png",
-    "brand": "xiomi"
+    "brand": "xiomi",
+    "banner1": "https://i.ibb.co/bJWbxd0/rsz-gv-banner3.jpg",
+    "banner2": "https://i.ibb.co/QnndRL0/gv-banner.jpg",
+    "banner3": "https://i.ibb.co/C1tSXY6/rsz-gv-banner4.jpg"
   },
   {
     "id": 6,
     "image": "https://i.ibb.co/H79Xhfb/apple.png",
-    "brand": "apple"
+    "brand": "apple",
+    "banner1": "https://i.ibb.co/7KJ9d4G/gv-banner6-1.jpg",
+    "banner2": "https://i.ibb.co/j6R15wh/rsz-gv-banner2.jpg",
+    "banner3": "https://i.ibb.co/bJWbxd0/rsz-gv-banner3.jpg"
   }
 ]
