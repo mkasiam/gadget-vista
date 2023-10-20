@@ -1,9 +1,8 @@
-import { useLoaderData} from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
   const product = useLoaderData();
-  console.log(product);
   const { _id, name, brand, type, price, rating, details, photo } = product;
   const handleUpdateProduct = (e) => {
     e.preventDefault();
@@ -16,7 +15,6 @@ const UpdateProduct = () => {
     const details = form?.details?.value;
     const photo = form?.photo?.value;
     const updatedProduct = { name, brand, type, rating, price, details, photo };
-    console.log(updatedProduct);
 
     fetch(`https://gadget-vista-server.vercel.app/products/${_id}`, {
       method: "PUT",
@@ -48,10 +46,7 @@ const UpdateProduct = () => {
         </h1>
         <div className="w-full space-y-4">
           <div>
-            <form
-              onSubmit={() => handleUpdateProduct(_id)}
-              className="space-y-4"
-            >
+            <form onSubmit={handleUpdateProduct} className="space-y-4">
               {/* Form input field Container  */}
               <div className="flex flex-col md:flex-row lg:flex-row gap-5">
                 {/* For Left Side Content  */}

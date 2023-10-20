@@ -27,7 +27,7 @@ const BrandProducts = ({ product }) => {
         <p className="text-gray-700 text-xl font-bold mb-2">Price: ${price}</p>
       <div className="flex gap-4 mt-4">
         <button className="px-4 py-2 bg-[#8973C0] rounded-md text-white font-bold">
-          <Link to={`update/${_id}`}>Update</Link>
+          <Link to={`/update/${_id}`}>Update</Link>
         </button>
         <button className="btn text-[#8973c0] btn-outline rounded-md">
           <Link to={`/details/${_id}`}>Details</Link>
