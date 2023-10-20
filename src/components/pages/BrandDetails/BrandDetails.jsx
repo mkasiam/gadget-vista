@@ -7,17 +7,20 @@ const BrandDetails = () => {
   const [brandProducts, setBrandProducts] = useState([]);
   const { brand } = useParams();
   const brands = useLoaderData();
-  //   desired brands is coming from the local json
   const desiredBrand = brands.find((details) => details.brand === brand);
-  const { id, image, banner1, banner2, banner3 } = desiredBrand;
+  const { banner1, banner2, banner3 } = desiredBrand || {}; // Ensure that desiredBrand is defined
+
   useEffect(() => {
     fetch("https://gadget-vista-server.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setBrandProducts(data));
   }, []);
-  const desiredBrandProducts = brandProducts.filter(
-    (cards) => cards.brand.toLowerCase() === brand.toLowerCase()
-  );
+
+  // Filter the products only if brand and cards.brand are defined
+  const desiredBrandProducts = brand && brandProducts
+    ? brandProducts.filter((cards) => cards.brand && cards.brand.toLowerCase() === brand.toLowerCase())
+    : [];
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const images = [banner1, banner2, banner3];
 
