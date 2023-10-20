@@ -18,7 +18,7 @@ Welcome to Gadget Vista, your one-stop destination for top-tier technology and e
 
 Feel free to reach out for any questions or assistance. Happy shopping!
 
-[App Link](https://social-manager-afb3e.web.app)
+[App Link](https://gadget-vista.web.app/)
 
 ## Acknowledgements
 
